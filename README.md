@@ -1,10 +1,10 @@
 # BibliotecaClubLectura
 
-# Estructura de la Base de Datos
+## Estructura de la Base de Datos
 
 Este proyecto utiliza una base de datos MySQL para gestionar una biblioteca. A continuación, se detalla la estructura de las tablas:
 
-## Tabla: `libros`
+### Tabla: `libros`
 
 Almacena información sobre los libros disponibles en la biblioteca.
 
@@ -20,7 +20,7 @@ Almacena información sobre los libros disponibles en la biblioteca.
 
 ---
 
-## Tabla: `donaciones`
+### Tabla: `donaciones`
 
 Registra las donaciones de libros realizadas por personas o entidades.
 
@@ -34,7 +34,7 @@ Registra las donaciones de libros realizadas por personas o entidades.
 
 ---
 
-## Tabla: `prestados`
+### Tabla: `prestados`
 
 Registra los libros prestados a los usuarios.
 
@@ -50,7 +50,7 @@ Registra los libros prestados a los usuarios.
 
 ---
 
-## Tabla: `usuarios`
+### Tabla: `usuarios`
 
 Almacena información de los usuarios registrados en la biblioteca.
 
@@ -66,7 +66,7 @@ Almacena información de los usuarios registrados en la biblioteca.
 
 ---
 
-## Relaciones entre Tablas
+### Relaciones entre Tablas
 
 - **libros** tiene una relación **uno-a-muchos** con `donaciones`.
 - **libros** tiene una relación **uno-a-muchos** con `prestados`.
