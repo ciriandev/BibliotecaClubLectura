@@ -68,6 +68,6 @@ Almacena información de los usuarios registrados en la biblioteca.
 
 ### Relaciones entre Tablas
 
-- **libros** tiene una relación **uno-a-muchos** con `donaciones`.
-- **libros** tiene una relación **uno-a-muchos** con `prestados`.
-- **usuarios** tiene una relación **uno-a-muchos** con `prestados`.
+- `libros` tiene una relación **uno-a-muchos** con `donaciones`.
+- `libros` tiene una relación **uno-a-muchos** con `prestados`.
+- `usuarios` tiene una relación **uno-a-muchos** con `prestados`.
