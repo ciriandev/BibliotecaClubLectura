@@ -15,12 +15,26 @@ namespace BibliotecaAPI.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Configuraciones adicionales para relaciones, índices, etc.
+            // Configuración de la clave primaria de Donacion
+            modelBuilder.Entity<Donacion>()
+                .HasKey(d => d.DonacionesId);  // Asegúrate de definir la clave primaria
+
+            modelBuilder.Entity<Usuario>()
+                .HasKey(u => u.UsuariosId);
+
+            modelBuilder.Entity<Prestado>()
+                .HasKey(p => p.PrestadosId);
+            
+            modelBuilder.Entity<Libro>()
+                .HasKey(l => l.LibrosId);
+
+            // Configuración de la relación entre Donacion y Libro
             modelBuilder.Entity<Donacion>()
                 .HasOne(d => d.Libro)
-                .WithMany()  // Donaciones no tienen una lista de Libros relacionados.
+                .WithMany()
                 .HasForeignKey(d => d.LibrosId);
 
+            // Configuración de las relaciones para las otras entidades
             modelBuilder.Entity<Prestado>()
                 .HasOne(p => p.Libro)
                 .WithMany()
