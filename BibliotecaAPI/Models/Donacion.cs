@@ -1,4 +1,5 @@
 using System;
+using System.Text.Json.Serialization;
 
 namespace BibliotecaAPI.Models
 {
@@ -11,6 +12,7 @@ namespace BibliotecaAPI.Models
         public int CantidadDonada { get; set; }
         
         // Propiedad de navegación si existe una relación con 'Libros'
+        [JsonIgnore]
         public virtual Libro Libro { get; set; }
     }
 

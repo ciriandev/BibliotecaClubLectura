@@ -46,6 +46,7 @@ namespace BibliotecaAPI.Controllers
             var donacion = new Donacion
             {
                 LibrosId = donacionDTO.LibrosId,
+                Donante = donacionDTO.Donante,
                 FechaDonacion = donacionDTO.FechaDonacion,
                 CantidadDonada = donacionDTO.CantidadDonada
             };
